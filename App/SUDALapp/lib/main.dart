@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/map.dart';
-import 'package:flutter_application_1/pages/map.dart';
+import 'package:flutter_application_1/pages/map_menu.dart';
 import 'package:flutter_application_1/pages/order.dart';
 
 void main() {
@@ -60,9 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
             //   style: TextStyle(fontSize: 60),
             // ),
             Image.asset(
-              '../assets/logo.png',
-              width: 100,
-              height: 100,
+              'assets/logo.png',
+              width: 150,
+              height: 150,
             ),
             ElevatedButton(
               onPressed: () {
@@ -70,16 +70,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const MapPage(
-                      title: 'ss',
+                    builder: (context) => const MapMenuPage(
+                      title: '업종 카테고리',
                     ),
                   ),
                 );
               },
               style: ElevatedButton.styleFrom(
-                minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
+                minimumSize: Size(300, 75), // 버튼의 최소 크기를 조정
               ),
-              child: Text('예약하기'),
+              child: Text('예약하기',style:TextStyle(fontSize: 20),),
             ),
             Container(
               height: 20,
@@ -91,15 +91,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const OrderPage(
-                      title: 'ss',
+                      title: '필요한 물품 주문하기',
                     ),
                   ),
                 );
               },
               style: ElevatedButton.styleFrom(
-                minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
+                minimumSize: Size(300, 75), // 버튼의 최소 크기를 조정
               ),
-              child: Text('주문하기'),
+              child: Text('주문하기',style:TextStyle(fontSize: 20),),
             )
           ],
         ),
