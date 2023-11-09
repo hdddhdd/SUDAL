@@ -61,45 +61,46 @@ class _MyHomePageState extends State<MyHomePage> {
             // ),
             Image.asset(
               '../assets/logo.png',
-              width: 100 ,
+              width: 100,
               height: 100,
             ),
-           ElevatedButton(
-  onPressed: () {
-    // 버튼 클릭 시 다음 페이지로 이동
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const MapPage(
-          title: 'ss',
-        ),
-      ),
-    );
-  },
-  style: ElevatedButton.styleFrom(
-    minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
-  ),
-  child: Text('예약하기'),
-),
-Container(height: 20,),
-ElevatedButton(
-  onPressed: () {
-    // 버튼 클릭 시 다음 페이지로 이동
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const OrderPage(
-          title: 'ss',
-        ),
-      ),
-    );
-  },
-  style: ElevatedButton.styleFrom(
-    minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
-  ),
-  child: Text('주문하기'),
-)
-
+            ElevatedButton(
+              onPressed: () {
+                // 버튼 클릭 시 다음 페이지로 이동
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MapPage(
+                      title: 'ss',
+                    ),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
+              ),
+              child: Text('예약하기'),
+            ),
+            Container(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // 버튼 클릭 시 다음 페이지로 이동
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OrderPage(
+                      title: 'ss',
+                    ),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(200, 50), // 버튼의 최소 크기를 조정
+              ),
+              child: Text('주문하기'),
+            )
           ],
         ),
       ),
