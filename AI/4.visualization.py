@@ -1,7 +1,7 @@
 import pandas as pd
 import folium
 
-input_csv_file = 'data/top_10_locations.csv'
+input_csv_file = 'data/top_10_locations_xgboost.csv'
 
 #주소 행 추가하기?
 
