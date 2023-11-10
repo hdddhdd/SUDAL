@@ -36,7 +36,7 @@ class MapMenuPage extends StatelessWidget {
       ),
       body: GridView.count(
         crossAxisCount: 2, // 열 수
-        childAspectRatio: 3.0, // 높이를 조절하려면 이 값을 조정 (더 작은 값으로 변경하면 높이가 줄어듭니다.)
+        childAspectRatio: 1.5, // 높이를 조절하려면 이 값을 조정 (더 작은 값으로 변경하면 높이가 줄어듭니다.)
         children: [
           MyButton('의류', () {
             // "식품 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
@@ -55,7 +55,7 @@ class MapMenuPage extends StatelessWidget {
           MyButton('마라탕', () {
             // "의류 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
           }),
-          MyButton('신발가게', () {
+          MyButton('신발매장', () {
             // "의류 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
           }),
         ],
@@ -73,12 +73,14 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      
       onTap: onTap,
       child: Container(
+        height: 100,
         alignment: Alignment.center,
         margin: EdgeInsets.all(16.0),
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Color.fromARGB(186, 255, 144, 144),
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(

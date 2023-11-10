@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 116, 123)),
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 255, 166, 155)),
         useMaterial3: true,
       ),
       home: const OrderPage(title: 'Flutter Demo Home Page'),
@@ -50,15 +50,7 @@ class OrderPage extends StatelessWidget {
               ),
             );
           }),
-          // MyButton('중국집', () {
-          //   // "의류 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
-          // }),
-          // MyButton('마라탕', () {
-          //   // "의류 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
-          // }),
-          // MyButton('신발가게', () {
-          //   // "의류 주문" 버튼을 누를 때 실행할 동작을 여기에 추가
-          // }),
+         
         ],
       ),
     );
@@ -79,7 +71,7 @@ class MyButton extends StatelessWidget {
         alignment: Alignment.center,
         margin: EdgeInsets.all(16.0),
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Color.fromARGB(255, 255, 166, 155),
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text(

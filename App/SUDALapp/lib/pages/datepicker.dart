@@ -42,6 +42,7 @@ class _DatePickerPageState extends State<DatePickerPage> {
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
               onPressed: () async {
@@ -49,7 +50,7 @@ class _DatePickerPageState extends State<DatePickerPage> {
                   context: context,
                   initialDate: date,
                   firstDate: DateTime(2000),
-                  lastDate: DateTime(2100), // 모든 날짜를 선택 가능하도록 설정
+                  lastDate: DateTime(2100),
                 );
                 if (selectedDate != null) {
                   setState(() {
@@ -57,27 +58,48 @@ class _DatePickerPageState extends State<DatePickerPage> {
                   });
                 }
               },
-              child: Text(
-                "날짜 선택하기",
-              ),
+              child: const Text("날짜 선택하기"),
+            ),
+            Container(
+              height: 20,
             ),
             Text(
-                '${date.year.toString()}년 ${date.month.toString().padLeft(2, '0')}월 ${date.day.toString().padLeft(2, '0')}일이 선택되었습니다.'),
-
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(child: Text('예약 완료하기'),  onPressed: () {
-                // 버튼 클릭 시 다음 페이지로 이동
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const SuccessPage(
-                      title: '',
+              '${date.year.toString()}년 ${date.month.toString().padLeft(2, '0')}월 ${date.day.toString().padLeft(2, '0')}일이 선택되었습니다.',
+            ),
+            Container(
+              height: 100,
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: double.infinity,
+                height: 100,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0),
+                      ),
                     ),
                   ),
-                );
-              },),
-                )
+                  child: const Text(
+                    '예약 완료하기',
+                    style: TextStyle(fontSize: 20, color: Colors.black),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SuccessPage(
+                          title: '',
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),

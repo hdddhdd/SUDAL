@@ -50,13 +50,14 @@ class _SuccessPageState extends State<SuccessPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
+              const Text(
                 "예약이 완료되었습니다.",
                 style: TextStyle(
                   color: Colors.black, // 텍스트 색상을 빨간색으로 설정
-                  
+                  fontSize: 20
                 ),
               ),
+              Container(height: 20,),
               ElevatedButton(
                 onPressed: () {
                   // 버튼 클릭 시 다음 페이지로 이동
@@ -69,7 +70,7 @@ class _SuccessPageState extends State<SuccessPage> {
                     ),
                   );
                 },
-                child: Text("메인 화면으로 돌아가기"),
+                child: const Text("메인 화면으로 돌아가기"),
               ),
             ],
           ),
